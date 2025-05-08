@@ -3,11 +3,16 @@ import joblib
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
+import os
+# Add local nltk_data to the data path
+nltk_data_path = os.path.join(os.path.dirname(__file__), 'nltk_data')
+nltk.data.path.append(nltk_data_path)
+
 
 # Download required NLTK resources
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
+# nltk.download('punkt')
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
 
 # Define lemmatizer and preprocessing function
 lemmatizer = WordNetLemmatizer()
